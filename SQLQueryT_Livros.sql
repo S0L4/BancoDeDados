@@ -37,9 +37,10 @@ INSERT INTO Livros VALUES ('Senhor dos Anéis',1,1)
 						  ,('It A Coisa',2,3)
 						  ,('1964',3,4)
 
-SELECT Livros.*,Autores.*,Generos.*
-FROM 
-
 SELECT * FROM Generos
 SELECT * FROM Autores
 SELECT * FROM Livros
+
+
+SELECT Livros.*,Autores.*,Generos.*
+FROM 
