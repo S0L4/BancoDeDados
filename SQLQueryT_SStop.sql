@@ -31,3 +31,13 @@ INSERT INTO Artistas (Nome)
 
 INSERT INTO EstilosMusicais
 		VALUES ('Samba')
+
+INSERT INTO EstilosMusicais
+		VALUES ('Folk')
+
+SELECT IdEst, Nome FROM EstilosMusicais WHERE IdEst = 1
+
+SELECT A.IdArt, A.Nome, E.IdEst, E.Nome AS NomeEstilo
+FROM Artistas A
+INNER JOIN EstilosMusicais E 
+ON A.IdEst = E.IdEst
