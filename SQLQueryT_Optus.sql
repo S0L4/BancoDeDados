@@ -15,12 +15,8 @@ CREATE TABLE Artistas
     ,IdEstilo     INT FOREIGN KEY REFERENCES Estilos (IdEstilo)
 );
 
-SELECT * FROM Estilos;
-
 INSERT INTO Estilos VALUES ('Folk');
 INSERT INTO Artistas (Nome, IdEstilo) VALUES ('Stu Larsen', 1);
-
-SELECT * FROM ARTISTAS;
 
 SELECT A.IdArtista, A.Nome, A.IdEstilo, E.Nome AS NomeEstilo FROM Artistas A INNER JOIN Estilos E ON A.IdEstilo = E.IdEstilo;
 
@@ -36,3 +32,6 @@ INSERT INTO Usuarios (Email, Senha, Permissao) VALUES ('admin@email.com', '12345
 INSERT INTO Usuarios (Email, Senha, Permissao) VALUES ('comum@email.com', '123456', 'COMUM');
 
 SELECT * FROM Estilos FOR JSON AUTO 
+SELECT * FROM Estilos;
+SELECT * FROM Artistas;
+SELECT * FROM Usuarios;
